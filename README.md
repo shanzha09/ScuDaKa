@@ -10,9 +10,11 @@
 
   1. 获取"eai-sess"和"UUkey"，方法：利用chrome等浏览器，直接抓取
 
-     打开浏览器输入网址"https://ua.scu.edu.cn/login?service=https%3A%2F%2Fwfw.scu.edu.cn%2Fa_scu%2Fapi%2Fsso%2Fcas-index%3Fredirect%3Dhttps%253A%252F%252Fwfw.scu.edu.cn%252Fncov%252Fwap%252Fdefault%252Findex"，按f12（如下图），点击network，然后清除历史，利用账号密码登录。
+     打开浏览器输入网址
+     https://ua.scu.edu.cn/loginservice=https%3A%2F%2Fwfw.scu.edu.cn%2Fa_scu%2Fapi%2Fsso%2Fcasindex%3Fredirect%3Dhttps%253A%252F%252Fwfw.scu.edu.cn%252Fncov%252Fwap%252Fdefault%252Findex
+     按f12（如下图），点击network，然后清除历史，利用账号密码登录。
 
-     ![image-20201224161233097](C:\Users\shanzha\AppData\Roaming\Typora\typora-user-images\image-20201224161233097.png)
+     ![image-20201224161233097](https://github.com/wangyufei2969/ScuDaKa/blob/main/image-20201224161233097.png)
 
      登录后会重定向到大家经常看到的微信打卡界面，点index，然后找到requests headers，再找里面的cookies，这个就是每个人的临时通行证，**复制这个，替换SaveData.py中headers里面的cookie（放在引号里面就行）**。
 
