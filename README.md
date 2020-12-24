@@ -18,13 +18,13 @@
 
      登录后会重定向到大家经常看到的微信打卡界面，点index，然后找到requests headers，再找里面的cookies，这个就是每个人的临时通行证，**复制这个，替换SaveData.py中headers里面的cookie（放在引号里面就行）**。
 
-     ![image-20201224161636884](C:\Users\shanzha\AppData\Roaming\Typora\typora-user-images\image-20201224161636884.png)
+     ![image-20201224161636884](https://github.com/wangyufei2969/ScuDaKa/blob/main/image-20201224161636884.png)
 
   2. SaveData.py中"data"字典，字典每个字段都注释了对应的含义，请修改的时候，只修改需要的（'szxqmc'， 'address'，'area'， ），**不要乱修改，否则你会收到辅导员的问候电话**。*其他校区需要修改"geo_api_info",这个是调取高德api生成的，可以手动获取，方法如下*：
 
      ​		在获取cookies步骤的基础上，删除记录，并点击网页中“点击获取地理位置”，就会出来点击后的两个响应文件，便是获取的位置信息，将此信息替换掉"geo_api_info"的相应值。
 
-     ![image-20201224164608825](C:\Users\shanzha\AppData\Roaming\Typora\typora-user-images\image-20201224164608825.png)
+     ![image-20201224164608825](https://github.com/wangyufei2969/ScuDaKa/blob/main/image-20201224164608825.png)
 
   3. 测试运行，部署定时运行：
 
@@ -42,11 +42,11 @@
 
      运行代码，若出现下图，则表示身份认证成功，**但是提交的data不一定是准确的，所以一定不要乱改data字典。**
 
-     ![image-20201224165625781](C:\Users\shanzha\AppData\Roaming\Typora\typora-user-images\image-20201224165625781.png)
+     ![image-20201224165625781](https://github.com/wangyufei2969/ScuDaKa/blob/main/image-20201224165625781.png)
 
      ## 若出现下图，则表示身份认证失败，需要重新检查cookies的获取以及准确性。
 
-     ![image-20201224170043389](C:\Users\shanzha\AppData\Roaming\Typora\typora-user-images\image-20201224170043389.png)
+     ![image-20201224170043389](https://github.com/wangyufei2969/ScuDaKa/blob/main/image-20201224170043389.png)
 
      **身份认证无误，data修改完毕后，**
 
